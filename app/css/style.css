@@ -1,0 +1,24 @@
+.jumbotron {
+  background-color: #4FE300;
+}
+
+#start-survey {
+  background-color: hotpink;
+}
+
+body {
+  background-image: url("background.png");
+}
+
+.question-heading {
+  
+}
+
+.question {
+  
+}
+
+#survey-section {
+  background-color: white;
+  padding: 30px;
+}
