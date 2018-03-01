@@ -31,16 +31,8 @@
     <h4>Link to a photo of you (required)</h4>
     <input type="text" id="photo" class="form-control" required="">
     <hr>
-    <!-- <h3 class="question-heading">Question 1</h3>
-    <h4 class="question">Did you play video games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</h4>
 
-      <select class="form-control" id="q1">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select> -->
+
 
     <form>
       <div class="form-group">
@@ -172,24 +164,25 @@
       event.preventDefault();
 
       // Here we grab the form elements
- var newSubmission = { 
-   name: $("#name").val().trim(), 
-   photo: $("#photo").val().trim(), 
-   scores: [ 
-     $("#q1").val(), 
-     $("#q2").val(), 
-     $("#q3").val(), 
-     $("#q4").val(), 
-     $("#q5").val(), 
-     $("#q6").val(), 
-     $("#q7").val(), 
-     $("#q8").val(), 
-     $("#q9").val(), 
-     $("#q10").val()
-] };
+      var newSubmission = {
+               name: $("#name").val(),
+               photo: $("#photo").val(),
+               scores: [
+                 $("#q1").val(),
+                 $("#q2").val(),
+                 $("#q3").val(),
+                 $("#q4").val(),
+                 $("#q5").val(),
+                 $("#q6").val(),
+                 $("#q7").val(),
+                 $("#q8").val(),
+                 $("#q9").val(),
+                 $("#q10").val()
+               ]
+             };
 
       console.log(newSubmission);
-
+      console.log("object keys " + Object.keys(newSubmission));
       // This line is the magic. It"s very similar to the standard ajax function we used.
       // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
       // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
@@ -198,25 +191,26 @@
       $.post("/api/friends", newSubmission,
         function(data) {
 
-
+          // console.log(newSubmission);
+          // console.log("object keys " + Object.keys(newSubmission));
           // Clear the form when submitting
           // $("#reserve-name").val("");
           // $("#reserve-phone").val("");
           // $("#reserve-email").val("");
           // $("#reserve-unique-id").val("");
           
-          $("#name").val(""), 
-          $("#photo").val(""), 
-            $("#q1").val(""), 
-            $("#q2").val(""), 
-            $("#q3").val(""), 
-            $("#q4").val(""), 
-            $("#q5").val(""), 
-            $("#q6").val(""), 
-            $("#q7").val(""), 
-            $("#q8").val(""), 
-            $("#q9").val(""), 
-            $("#q10").val("")
+          // $("#name").val(""); 
+          // $("#photo").val(""); 
+          //   $("#q1").val(""); 
+          //   $("#q2").val(""); 
+          //   $("#q3").val(""); 
+          //   $("#q4").val(""); 
+          //   $("#q5").val(""); 
+          //   $("#q6").val(""); 
+          //   $("#q7").val(""); 
+          //   $("#q8").val(""); 
+          //   $("#q9").val(""); 
+          //   $("#q10").val("");
 
         });
 

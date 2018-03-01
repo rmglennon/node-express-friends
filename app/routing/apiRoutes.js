@@ -28,6 +28,23 @@ module.exports = function(app) {
   app.post("/api/friends", function(req, res) {
     // req.body is available since we're using the body-parser middleware
     friendsData.push(req.body);
+    
+
+    // console.log(friendsData);
+    // 
+    // console.log("object keys friendsdata " + Object.keys(friendsData[0]));
+
+    //console.log(friendsScores);
+    
+      for (var i = 0; i < friendsData.length; i++) {
+    var friendsScores = friendsData[i].scores.map(Number);
+      }
+console.log(friendsScores);
+       //friendsData.map(Number);
+    //  friendsScores.push.apply(friendsScores, friendsData);
+      //friendsScores.map(Number);
+    //  console.log(friendsScores);
+
 
   });
 
