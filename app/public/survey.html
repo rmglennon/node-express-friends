@@ -7,18 +7,18 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-    <link rel="stylesheet" type="text/css" href="/style.css">
+
+  <link rel="stylesheet" type="text/css" href="/style.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 </head>
 
@@ -31,46 +31,162 @@
     <h4>Link to a photo of you (required)</h4>
     <input type="text" id="photo" class="form-control" required="">
     <hr>
-    <h3 class="question-heading">Question 1</h3>
-    <h4 class="question">Did you play games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</h4>
+    <!-- <h3 class="question-heading">Question 1</h3>
+    <h4 class="question">Did you play video games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</h4>
 
-    <!-- <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="q1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose an answer
-  </button>
-      <div class="dropdown-menu" aria-labelledby="q1">
-        <a class="dropdown-item" data-option-array-index="1" style="" href="#">1 (Never)</a>
-        <a class="dropdown-item" data-option-array-index="2" style="" href="#">2</a>
-        <a class="dropdown-item" data-option-array-index="3" style="" href="#">3</a>
-        <a class="dropdown-item" data-option-array-index="4" style="" href="#">4</a>
-        <a class="dropdown-item" data-option-array-index="5" style="" href="#">5 (Always)</a>
-      </div> -->
-      
-      <select class="chosen-select" id="q1">
+      <select class="form-control" id="q1">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select> -->
+
+    <form>
+      <div class="form-group">
+        <label for="q1">Did you play video games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</label>
+        <select class="form-control answer-menu" id="q1">
+      <option value="1">1 (Never)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Always)</option>
+    </select>
+      </div>
+
+        <div class="form-group">
+          <label for="q2">Did you spend Saturday mornings watching cartoons?</label>
+          <select class="form-control answer-menu" id="q2">
         <option value="1">1 (Never)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Always)</option>
       </select>
-      
-      <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
-    </div>
-    
-    
-    <script>
+        </div>
+        
+        <div class="form-group">
+          <label for="q3">Did you tight-roll the cuffs on your acid-washed jeans or wear anything from Jordache?</label>
+          <select class="form-control answer-menu" id="q3">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="q4">How often did MTV play actual music?</label>
+          <select class="form-control answer-menu" id="q4">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
 
+        <div class="form-group">
+          <label for="q5">Did you organize your papers and folders into a Trapper Keeper?</label>
+          <select class="form-control answer-menu" id="q5">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="q6">Have you played with either Cabbage Patch Kids or Garbage Pail Kids?</label>
+          <select class="form-control answer-menu" id="q6">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="q7">When you played the Oregon Trail video game, how often were you the banker from Boston?</label>
+          <select class="form-control answer-menu" id="q7">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="q8">At a sleepover, how often did you watch any of these: "Dirty Dancing", "Back to the Future", "The Goonies", or any John Hughes movie?</label>
+          <select class="form-control answer-menu" id="q8">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="q9">How often did you make your friends a mix tape?</label>
+          <select class="form-control answer-menu" id="q9">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="q10">Were any of these cereals a part of your balanced breakfast? Mr. T, Smurf-Berry Crunch, Bill & Ted's Excellent Cereal, Ghostbusters, Franken Berry, or G.I Joe Action Stars</label>
+          <select class="form-control answer-menu" id="q10">
+        <option value="1">1 (Never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Always)</option>
+      </select>
+        </div>
+
+    </form>
+
+    <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
+  </div>
+  
+  <footer class="footer">
+    <p>
+    <a href="/api/friends">API friends list</a>
+    <a href="https://github.com/rmglennon/node-express-friends">Code on GitHub</a>
+  </p>
+  </footer>
+
+
+  <script>
     $(".submit").on("click", function(event) {
       event.preventDefault();
 
       // Here we grab the form elements
-      var newSubmission = {
-        name: $("#name").val().trim(),
-        photo: $("#photo").val().trim(),
-        scores: [
-          $("#q1").val()
-        ]
-      };
+ var newSubmission = { 
+   name: $("#name").val().trim(), 
+   photo: $("#photo").val().trim(), 
+   scores: [ 
+     $("#q1").val(), 
+     $("#q2").val(), 
+     $("#q3").val(), 
+     $("#q4").val(), 
+     $("#q5").val(), 
+     $("#q6").val(), 
+     $("#q7").val(), 
+     $("#q8").val(), 
+     $("#q9").val(), 
+     $("#q10").val()
+] };
 
       console.log(newSubmission);
 
@@ -88,12 +204,24 @@
           // $("#reserve-phone").val("");
           // $("#reserve-email").val("");
           // $("#reserve-unique-id").val("");
+          
+          $("#name").val(""), 
+          $("#photo").val(""), 
+            $("#q1").val(""), 
+            $("#q2").val(""), 
+            $("#q3").val(""), 
+            $("#q4").val(""), 
+            $("#q5").val(""), 
+            $("#q6").val(""), 
+            $("#q7").val(""), 
+            $("#q8").val(""), 
+            $("#q9").val(""), 
+            $("#q10").val("")
 
         });
 
     });
-
-</script>
+  </script>
 
 
 

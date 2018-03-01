@@ -14,11 +14,15 @@ body {
   
 }
 
-.question {
-  
+.answer-menu {
+ width: 30% !important;
 }
 
 #survey-section {
   background-color: white;
   padding: 30px;
+}
+
+.form-control {
+
 }
