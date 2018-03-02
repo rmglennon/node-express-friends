@@ -20,32 +20,42 @@ module.exports = function(app) {
   // In each of the below cases when a user visits a link
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
-
+  
   app.get("/api/friends", function(req, res) {
     res.json(friendsData);
   });
-
+  
   app.post("/api/friends", function(req, res) {
     // req.body is available since we're using the body-parser middleware
-    friendsData.push(req.body);
     
-
-    // console.log(friendsData);
-    // 
-    // console.log("object keys friendsdata " + Object.keys(friendsData[0]));
-
-    //console.log(friendsScores);
+    // convert the friends values that came in as strings to an array of numbers
+    var scoresAsNum = req.body.scores.map(Number);
     
-      for (var i = 0; i < friendsData.length; i++) {
-    var friendsScores = friendsData[i].scores.map(Number);
-      }
-console.log(friendsScores);
-       //friendsData.map(Number);
-    //  friendsScores.push.apply(friendsScores, friendsData);
-      //friendsScores.map(Number);
-    //  console.log(friendsScores);
+    // make a new object with the incoming data and scores as numbers
+    var dataObj = {
+      name: req.body.name,
+      photo: req.body.photo,
+      scores: scoresAsNum
+    };
+    
+    // push the object into the friendsData array - unshift adds to beginning to avoid having to figure out the index of the new object
+    friendsData.unshift(dataObj);
+    console.log(friendsData);
+    
+    // make array to hold the differences between scores
+    var difference = [];
+    // var i = 1 because 0 is the same user
+    // this loop is going through the users (aka the number of surveys submitted)
+    for (var i = 1; i < friendsData.length; i++) {
+      // this loop is going through the elements of the individual scores
+      for (var j = 0; j < scoresAsNum.length; j++) {
+        
+        // take absolute values of the differences
+         difference.push(Math.abs(scoresAsNum[j] -  friendsData[i].scores[j]));
 
-
+      };
+    };
+             console.log("diff is " + difference);
+    
   });
-
 }

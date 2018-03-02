@@ -164,25 +164,26 @@
       event.preventDefault();
 
       // Here we grab the form elements
-      var newSubmission = {
-               name: $("#name").val(),
-               photo: $("#photo").val(),
-               scores: [
-                 $("#q1").val(),
-                 $("#q2").val(),
-                 $("#q3").val(),
-                 $("#q4").val(),
-                 $("#q5").val(),
-                 $("#q6").val(),
-                 $("#q7").val(),
-                 $("#q8").val(),
-                 $("#q9").val(),
-                 $("#q10").val()
-               ]
-             };
 
-      console.log(newSubmission);
-      console.log("object keys " + Object.keys(newSubmission));
+             var newSubmission = {
+                      name: $("#name").val(),
+                      photo: $("#photo").val(),
+                      scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                      ]
+                    };
+
+      // console.log(newSubmission);
+      // console.log("object keys " + Object.keys(newSubmission));
       // This line is the magic. It"s very similar to the standard ajax function we used.
       // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
       // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
