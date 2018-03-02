@@ -22,8 +22,8 @@
 var friendsData = [
   {
     "name": "Totally 80s",
-    "photo": "/assets/images/cassette.jpg",
-    "scores": [5,5,5,5,5,5,5,5,5,5]
+    "photo": "assets/images/cassette.jpg",
+    "scores": [1,1,1,1,1,1,1,1,1,1]
   }
 ];
 
