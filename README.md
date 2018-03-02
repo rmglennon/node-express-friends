@@ -6,7 +6,7 @@ Take the test at https://node-express-friends.herokuapp.com/.
 
 You can see JSON for all the friends in the database by clicking the link for `API friends list` on the page.
 
-![Sample survey questions](/public/assets/images/survey-screenshot.png)
+![Sample survey questions](/app/public/assets/images/survey-screenshot.png)
 
 ## Local set up for development purposes
 
