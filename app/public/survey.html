@@ -3,23 +3,21 @@
 
 <head>
   <title>80s Kid Survey</title>
-
+  
   <meta charset="utf-8">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
+  
 </head>
 
 <body>
@@ -31,214 +29,225 @@
     <h4>Link to a photo of you (required)</h4>
     <input type="text" id="photo" class="form-control" required="">
     <hr>
-
-
-
+    
     <form>
       <div class="form-group">
-        <label for="q1">Did you play video games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</label>
+        <label for="q1">Have you played video games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</label>
         <select class="form-control answer-menu" id="q1">
-      <option value="1">1 (Never)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Always)</option>
-    </select>
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
       </div>
-
-        <div class="form-group">
-          <label for="q2">Did you spend Saturday mornings watching cartoons?</label>
-          <select class="form-control answer-menu" id="q2">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="q3">Did you tight-roll the cuffs on your acid-washed jeans or wear anything from Jordache?</label>
-          <select class="form-control answer-menu" id="q3">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="q4">How often did MTV play actual music?</label>
-          <select class="form-control answer-menu" id="q4">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-
-        <div class="form-group">
-          <label for="q5">Did you organize your papers and folders into a Trapper Keeper?</label>
-          <select class="form-control answer-menu" id="q5">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="q6">Have you played with either Cabbage Patch Kids or Garbage Pail Kids?</label>
-          <select class="form-control answer-menu" id="q6">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="q7">When you played the Oregon Trail video game, how often were you the banker from Boston?</label>
-          <select class="form-control answer-menu" id="q7">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="q8">At a sleepover, how often did you watch any of these: "Dirty Dancing", "Back to the Future", "The Goonies", or any John Hughes movie?</label>
-          <select class="form-control answer-menu" id="q8">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="q9">How often did you make your friends a mix tape?</label>
-          <select class="form-control answer-menu" id="q9">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-        
-        
-        <div class="form-group">
-          <label for="q10">Were any of these cereals a part of your balanced breakfast? Mr. T, Smurf-Berry Crunch, Bill & Ted's Excellent Cereal, Ghostbusters, Franken Berry, or G.I Joe Action Stars</label>
-          <select class="form-control answer-menu" id="q10">
-        <option value="1">1 (Never)</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 (Always)</option>
-      </select>
-        </div>
-
+      
+      <div class="form-group">
+        <label for="q2">Did you spend Saturday mornings watching cartoons?</label>
+        <select class="form-control answer-menu" id="q2">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q3">Have you tight-rolled the cuffs on your acid-washed jeans or worn anything from Jordache?</label>
+        <select class="form-control answer-menu" id="q3">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q4">Does MTV actually play music videos?</label>
+        <select class="form-control answer-menu" id="q4">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q5">Did you organize your papers and folders into a Trapper Keeper?</label>
+        <select class="form-control answer-menu" id="q5">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q6">Have you played with either Cabbage Patch Kids or Garbage Pail Kids?</label>
+        <select class="form-control answer-menu" id="q6">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q7">When you played the Oregon Trail video game, how often were you the banker from Boston?</label>
+        <select class="form-control answer-menu" id="q7">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q8">At a sleepover, how often did you watch any of these: "Dirty Dancing", "Back to the Future", "The Goonies", or any John Hughes movie?</label>
+        <select class="form-control answer-menu" id="q8">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q9">How often did you make your friends a mix tape on cassette?</label>
+        <select class="form-control answer-menu" id="q9">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="q10">Were any of these cereals a part of your balanced breakfast? Mr. T, Smurf-Berry Crunch, Bill & Ted's Excellent Cereal, Ghostbusters, Franken Berry, or G.I Joe Action Stars</label>
+        <select class="form-control answer-menu" id="q10">
+          <option value="choose">Choose an option</option>
+          <option value="1">1 (Never)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Always)</option>
+        </select>
+      </div>
     </form>
-
-    <button type="submit" class="btn btn-primary submit" data-toggle="modal" data-target="#results-modal" id="submit">Submit</button>
+    
+    <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
   </div>
   
   <footer class="footer">
     <p>
-    <a href="/api/friends">API friends list</a>
-    <a href="https://github.com/rmglennon/node-express-friends">Code on GitHub</a>
-  </p>
+      <a href="/api/friends">API friends list</a>
+      <a href="https://github.com/rmglennon/node-express-friends">Code on GitHub</a>
+    </p>
   </footer>
   
-
-<div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-label">Your match</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h2 id="match-name"></h2>
-        <img id="match-img" src="" alt="">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  
+  <div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-label">Your match</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
+  
   <script>
-    $(".submit").on("click", function(event) {
-      event.preventDefault();
-
-      // Here we grab the form elements
-
-             var newSubmission = {
-                      name: $("#name").val(),
-                      photo: $("#photo").val(),
-                      scores: [
-                        $("#q1").val(),
-                        $("#q2").val(),
-                        $("#q3").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                      ]
-                    };
-
-      // console.log(newSubmission);
-      // console.log("object keys " + Object.keys(newSubmission));
-      // This line is the magic. It"s very similar to the standard ajax function we used.
-      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-      // depending on if a tables is available or not.
-
-      $.post("/api/friends", newSubmission,
-        function(data) {
-          
-          // $("#name").val(""); 
-          // $("#photo").val(""); 
-          //   $("#q1").val(""); 
-          //   $("#q2").val(""); 
-          //   $("#q3").val(""); 
-          //   $("#q4").val(""); 
-          //   $("#q5").val(""); 
-          //   $("#q6").val(""); 
-          //   $("#q7").val(""); 
-          //   $("#q8").val(""); 
-          //   $("#q9").val(""); 
-          //   $("#q10").val("");
-          
-          console.log("data is " + JSON.stringify(data));
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
-          console.log("data name = " + data.name + " data photo " + data.photo);
-
-        });
-
-    });
+  
+  // when submit button is clicked, capture values from the form
+  $(".submit").on("click", function(event) {
+    event.preventDefault();
+    
+    // Validate the form to make sure all questions were answered
+    function validateForm() {
+      var isValid = true;
+      $(".form-control").each(function() {
+        if ($(this).val() === "choose") {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+    
+    if (validateForm()) {
+      var newSubmission = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()
+        ]
+      };
+      // make a post request 
+      $.post("/api/friends", newSubmission, function(data) {
+        
+        // clear values on submit
+        $("#name").val(""); 
+        $("#photo").val(""); 
+        $("#q1").val("choose"); 
+        $("#q2").val("choose"); 
+        $("#q3").val("choose"); 
+        $("#q4").val("choose"); 
+        $("#q5").val("choose"); 
+        $("#q6").val("choose"); 
+        $("#q7").val("choose"); 
+        $("#q8").val("choose"); 
+        $("#q9").val("choose"); 
+        $("#q10").val("choose");
+        
+        // use the matching name and photo in the modal
+        $("#match-name").text(data.name);
+        $("#match-img").attr("src", data.photo);
+        $("#results-modal").modal("toggle");
+        
+        //  location.reload();
+      });
+      
+    }
+    else {
+      alert("Please fill out all fields before submitting!");
+    }
+  });
+  
   </script>
-
-
-
 </body>
-
 </html>

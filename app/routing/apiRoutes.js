@@ -1,33 +1,18 @@
-// Your apiRoutes.js file should contain two routes:
-// A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
-// A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
-
-// ===============================================================================
-// LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
-
+// require the data file
 var friendsData = require("../data/friends");
 
-// ===============================================================================
-// ROUTING
-// ===============================================================================
-
+// set up routing
 module.exports = function(app) {
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
   
+  // show the results as JSON on /api/friends
   app.get("/api/friends", function(req, res) {
     res.json(friendsData);
   });
   
+  // set up post to add data and compare it to other friends
   app.post("/api/friends", function(req, res) {
-    // req.body is available since we're using the body-parser middleware
     
+    // use req.body from body-parser middleware
     // convert the friends values that came in as strings to an array of numbers
     var scoresAsNum = req.body.scores.map(Number);
     
@@ -39,38 +24,40 @@ module.exports = function(app) {
     };
     
     // make array to hold the differences between scores
+    var scoresArr = [];
+    var difference = 0;
+    var matchName = "";
+    var matchPhoto = "";
+    var match = 0;
     
-    // var scoresArr = [];
-          var difference = 0;
-          var matchName = "";
-          var matchPhoto = "";
-
     // this loop is going through the users (aka the number of surveys submitted)
     for (var i = 0; i < friendsData.length; i++) {
       difference = 0;
-
+      
       // this loop is going through the elements of the individual scores
       for (var j = 0; j < scoresAsNum.length; j++) {
         
         // take absolute values of the differences
-         difference += Math.abs(scoresAsNum[j] - friendsData[i].scores[j]);
-         
-         if (difference <= 40) {
-           matchName = friendsData[i].name;
-           matchPhoto = friendsData[i].photo;
-         }
+        difference += Math.abs(scoresAsNum[j] - friendsData[i].scores[j]);
       };
+      // add this computed difference to array of other differences
+      scoresArr.push(difference);
     }
-    //  scoresArr.push(difference);
-      
-console.log("difference " + difference);
-
-// push the object into the friendsData array - unshift adds to beginning to avoid having to figure out the index of the new object
-//friendsData.unshift(dataObj);
-friendsData.push(dataObj);
-console.log(friendsData);
-
-res.json({name: matchName, photo: matchPhoto});
-
+    
+    // look for fewest difference values
+    for (var i = 0; i < scoresArr.length; i++) {
+      if(scoresArr[i] <= scoresArr[match]) {
+        match = i;
+        matchName = friendsData[i].name;
+        matchPhoto = friendsData[i].photo;
+      }
+    }
+    
+    // push the object into the friendsData array
+    friendsData.push(dataObj);
+    
+    // send response of matching name and photo
+    res.json({name: matchName, photo: matchPhoto});
+    
   });
 }
