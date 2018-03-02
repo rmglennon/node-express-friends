@@ -10,10 +10,6 @@ body {
   background-image: url("/assets/images/background.png");
 }
 
-.question-heading {
-  
-}
-
 .answer-menu {
  width: 30% !important;
 }
@@ -21,8 +17,29 @@ body {
 #survey-section {
   background-color: white;
   padding: 30px;
+  margin: 20px;
 }
 
-.form-control {
+form label {
+  font-size: 20px;
+}
 
+.your-info {
+  font-size: 20px;
+}
+
+#code-links {
+  background: white;
+  font-size: 20px;
+  border: 1px solid #4FE300;
+  margin: 20px;
+}
+
+#survey-section {
+  background-color: hotpink;
+}
+
+#credit {
+  font-size: 8px;
+  margin: 20px;
 }

@@ -21,17 +21,18 @@
 </head>
 
 <body>
-  <div class="container" id="survey-section">
-    <h1>1980s survey questions</h1>
-    <h2>About you</h2>
-    <h4>Your name (required)</h4>
-    <input type="text" id="name" class="form-control" required="">
-    <h4>Link to a photo of you (required)</h4>
-    <input type="text" id="photo" class="form-control" required="">
+  <div class="container-fluid" id="survey-section">
+    <h1 class="display-4 text-center">Take the 80s kid survey</h1>
+    <h3>About you</h3>
+    <h4 class="your-info">Your name (required)</h4>
+    <input type="text" id="name" class="form-control" required>
+    <h4 class="your-info">Link to a photo of you (required)</h4>
+    <input type="text" id="photo" class="form-control" required>
     <hr>
     
     <form>
       <div class="form-group">
+        <h3>About you and the 1980s</h3>
         <label for="q1">Have you played video games on a Nintendo Entertainment System or Atari 2600 (and not the reissue editions)?</label>
         <select class="form-control answer-menu" id="q1">
           <option value="choose">Choose an option</option>
@@ -156,12 +157,17 @@
   </div>
   
   <footer class="footer">
-    <p>
-      <a href="/api/friends">API friends list</a>
-      <a href="https://github.com/rmglennon/node-express-friends">Code on GitHub</a>
-    </p>
-  </footer>
+		<div class="container text-center">
+		<p id="code-links">
+			<a href="/api/friends">See the full API friends list</a> |
+			<a href="https://github.com/rmglennon/node-express-friends">View the code on GitHub</a>
+		</p>
+	</div>
+	</footer>
   
+  <div class="container-fluid text-center">
+  <p id="credit"><a href="http://www.freepik.com">Background image: Designed by Freepik</a></p>
+</div>
   
   <div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -237,13 +243,11 @@
         // use the matching name and photo in the modal
         $("#match-name").text(data.name);
         $("#match-img").attr("src", data.photo);
-        $("#results-modal").modal("toggle");
-        
+        $("#results-modal").modal("toggle");  
       });
-      
     }
     else {
-      alert("Please fill out all fields before submitting!");
+      alert("Looks like you totally missed a question. Make sure you answer all before submitting.");
     }
   });
   
