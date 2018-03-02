@@ -18,7 +18,14 @@
 //     ]
 // }
 // ];
-var friendsData = [];
+// var friendsData = [];
+var friendsData = [
+  {
+    "name": "Totally 80s",
+    "photo": "/assets/images/cassette.jpg",
+    "scores": [5,5,5,5,5,5,5,5,5,5]
+  }
+];
 
 // // Note how we export the array. This makes it accessible to other files using require.
 module.exports = friendsData;

@@ -38,24 +38,51 @@ module.exports = function(app) {
       scores: scoresAsNum
     };
     
-    // push the object into the friendsData array - unshift adds to beginning to avoid having to figure out the index of the new object
-    friendsData.unshift(dataObj);
-    console.log(friendsData);
+
     
     // make array to hold the differences between scores
-    var difference = [];
+    
+    var scoresArr = [];
     // var i = 1 because 0 is the same user
     // this loop is going through the users (aka the number of surveys submitted)
-    for (var i = 1; i < friendsData.length; i++) {
+    for (var i = 0; i < friendsData.length; i++) {
+      
+      var difference = 0;
       // this loop is going through the elements of the individual scores
       for (var j = 0; j < scoresAsNum.length; j++) {
         
         // take absolute values of the differences
-         difference.push(Math.abs(scoresAsNum[j] -  friendsData[i].scores[j]));
+         difference += Math.abs(scoresAsNum[j] -  friendsData[i].scores[j]);
 
       };
-    };
-             console.log("diff is " + difference);
-    
+    }
+      scoresArr.push(difference);
+      
+console.log("difference " + difference);
+
+var matchName = "";
+var matchPhoto = "";
+var originalIndex = 0;
+var minDiff = scoresArr[0];
+for (var i = 1; i < scoresArr.length; i++){
+    if (scoresArr[i] < minDiff) {
+        minDiff = scoresArr[i];
+        originalIndex = i; 
+        console.log("diff is " + minDiff)  
+        console.log("originalIndex " + originalIndex );
+        matchName = scoresArr[i].name;
+        matchPhoto = scoresArr[i].photo;
+    }
+    else {
+      minDiff = scoresArr[i];
+      console.log("else minDiff " + minDiff + " originalIndex " + originalIndex)
+    }
+
+}
+
+// push the object into the friendsData array - unshift adds to beginning to avoid having to figure out the index of the new object
+friendsData.unshift(dataObj);
+console.log(friendsData);
+
   });
 }
