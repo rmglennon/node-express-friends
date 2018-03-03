@@ -22,12 +22,19 @@
 
 <body>
   <div class="container-fluid" id="survey-section">
+    
     <h1 class="display-4 text-center">Take the 80s kid survey</h1>
-    <h3>About you</h3>
-    <h4 class="your-info">Your name (required)</h4>
-    <input type="text" id="name" class="form-control" required>
-    <h4 class="your-info">Link to a photo of you (required)</h4>
-    <input type="text" id="photo" class="form-control" required>
+    
+    <form>
+      <div class="form-group">
+        <h3>About you</h3>
+        <h4 class="your-info">Your name (required)</h4>
+        <input type="text" id="name" class="form-control" required>
+        <h4 class="your-info">Link to a photo of you (required)</h4>
+        <input type="text" id="photo" class="form-control" required>
+      </div>
+    </form>
+  
     <hr>
     
     <form>
@@ -69,7 +76,7 @@
       </div>
       
       <div class="form-group">
-        <label for="q4">Does MTV actually play music videos?</label>
+        <label for="q4">Did MTV actually play music videos?</label>
         <select class="form-control answer-menu" id="q4">
           <option value="choose">Choose an option</option>
           <option value="1">1 (Never)</option>
@@ -129,7 +136,7 @@
       </div>
       
       <div class="form-group">
-        <label for="q9">How often did you make your friends a mix tape on cassette?</label>
+        <label for="q9">Have you made your friends a mix tape on cassette?</label>
         <select class="form-control answer-menu" id="q9">
           <option value="choose">Choose an option</option>
           <option value="1">1 (Never)</option>
@@ -141,7 +148,7 @@
       </div>
       
       <div class="form-group">
-        <label for="q10">Were any of these cereals a part of your balanced breakfast? Mr. T, Smurf-Berry Crunch, Bill & Ted's Excellent Cereal, Ghostbusters, Franken Berry, or G.I Joe Action Stars</label>
+        <label for="q10">Were any of these cereals a part of your balanced breakfast: Mr. T, Smurf-Berry Crunch, Bill & Ted's Excellent Cereal, Ghostbusters, Franken Berry, or G.I Joe Action Stars?</label>
         <select class="form-control answer-menu" id="q10">
           <option value="choose">Choose an option</option>
           <option value="1">1 (Never)</option>
@@ -199,7 +206,7 @@
     function validateForm() {
       var isValid = true;
       $(".form-control").each(function() {
-        if ($(this).val() === "choose") {
+        if (($(this).val() === "choose") || ($(this).val() === "")) {
           isValid = false;
         }
       });

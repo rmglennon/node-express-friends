@@ -23,40 +23,43 @@ module.exports = function(app) {
       scores: scoresAsNum
     };
     
-    // make array to hold the differences between scores
+    // make array to hold the differences between scores and look at the differences between the current users and other friends
     var scoresArr = [];
     var difference = 0;
     var matchName = "";
     var matchPhoto = "";
-    var match = 0;
     
-    // this loop is going through the users (aka the number of surveys submitted)
+    // this loop is going through all the friends
     for (var i = 0; i < friendsData.length; i++) {
       difference = 0;
       
       // this loop is going through the elements of the individual scores
       for (var j = 0; j < scoresAsNum.length; j++) {
         
-        // take absolute values of the differences
+        // take absolute values of the differences of each element and add them 
         difference += Math.abs(scoresAsNum[j] - friendsData[i].scores[j]);
       };
-      // add this computed difference to array of other differences
+      // add the total difference to array of differences for all users
       scoresArr.push(difference);
     }
     
-    // look for fewest difference values
+    // make a variable that is one more than the max difference between questions
+    var smallestDiff = 41; 
+    
+    // check for smallest difference in the array
     for (var i = 0; i < scoresArr.length; i++) {
-      if(scoresArr[i] <= scoresArr[match]) {
-        match = i;
+
+      if (scoresArr[i] <= smallestDiff) {
+        smallestDiff = scoresArr[i];
         matchName = friendsData[i].name;
         matchPhoto = friendsData[i].photo;
       }
     }
     
-    // push the object into the friendsData array
+    // push the new object into the friendsData array
     friendsData.push(dataObj);
     
-    // send response of matching name and photo
+    // send response of closest-matching name and photo
     res.json({name: matchName, photo: matchPhoto});
     
   });

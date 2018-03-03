@@ -12,6 +12,7 @@ body {
 
 .answer-menu {
  width: 30% !important;
+ margin-bottom: 25px;
 }
 
 #survey-section {
@@ -26,6 +27,12 @@ form label {
 
 .your-info {
   font-size: 20px;
+}
+
+#name, 
+#photo {
+  width: 70% !important;
+  margin-bottom: 25px;
 }
 
 #code-links {
