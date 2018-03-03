@@ -35,6 +35,10 @@ form label {
   margin-bottom: 25px;
 }
 
+#match-img {
+  max-width: 100%;
+}
+
 #code-links {
   background: white;
   font-size: 20px;
